@@ -1,0 +1,147 @@
+{
+  "targetMatchId": "21601",
+  "topics": {
+    "events/tennis/2026/uso/score/21601": {
+      "topic": "events/tennis/2026/uso/score/21601",
+      "phases": {
+        "probe": 1,
+        "target": 5
+      },
+      "eventTypes": {
+        "unknown": 6
+      },
+      "matchIds": {
+        "21601": 6
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 6,
+      "likely": "snapshot-or-state"
+    },
+    "events/tennis/2026/uso/stat/21601": {
+      "topic": "events/tennis/2026/uso/stat/21601",
+      "phases": {
+        "target": 6,
+        "probe": 1
+      },
+      "eventTypes": {
+        "unknown": 7
+      },
+      "matchIds": {
+        "21601": 7
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 7,
+      "likely": "snapshot-or-state"
+    },
+    "events/tennis/2026/uso/slamtracker/21601": {
+      "topic": "events/tennis/2026/uso/slamtracker/21601",
+      "phases": {
+        "target": 3
+      },
+      "eventTypes": {
+        "MatchWinner": 3
+      },
+      "matchIds": {
+        "21601": 3
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 3,
+      "likely": "event-or-delta"
+    },
+    "events/tennis/2026/uso/mip": {
+      "topic": "events/tennis/2026/uso/mip",
+      "phases": {
+        "target": 1
+      },
+      "eventTypes": {
+        "unknown": 1
+      },
+      "matchIds": {
+        "21601": 1
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 1,
+      "likely": "unknown"
+    }
+  },
+  "targetTopics": [
+    {
+      "topic": "events/tennis/2026/uso/score/21601",
+      "phases": {
+        "probe": 1,
+        "target": 5
+      },
+      "eventTypes": {
+        "unknown": 6
+      },
+      "matchIds": {
+        "21601": 6
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 6,
+      "likely": "snapshot-or-state"
+    },
+    {
+      "topic": "events/tennis/2026/uso/stat/21601",
+      "phases": {
+        "target": 6,
+        "probe": 1
+      },
+      "eventTypes": {
+        "unknown": 7
+      },
+      "matchIds": {
+        "21601": 7
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 7,
+      "likely": "snapshot-or-state"
+    },
+    {
+      "topic": "events/tennis/2026/uso/slamtracker/21601",
+      "phases": {
+        "target": 3
+      },
+      "eventTypes": {
+        "MatchWinner": 3
+      },
+      "matchIds": {
+        "21601": 3
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 3,
+      "likely": "event-or-delta"
+    },
+    {
+      "topic": "events/tennis/2026/uso/mip",
+      "phases": {
+        "target": 1
+      },
+      "eventTypes": {
+        "unknown": 1
+      },
+      "matchIds": {
+        "21601": 1
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 1,
+      "likely": "unknown"
+    }
+  ]
+}

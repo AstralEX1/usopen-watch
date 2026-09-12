@@ -1,0 +1,93 @@
+{
+  "matchId": "3601",
+  "eventCount": 30,
+  "counts": {
+    "bySource": {
+      "http": 30
+    },
+    "byPhase": {
+      "http": 30
+    },
+    "byTopic": {
+      "https://scores.usopen.org/scores/feeds/2026/matches/live/scores.json": 30
+    },
+    "byType": {
+      "unknown": 30
+    }
+  },
+  "duplicates": {
+    "exactDuplicateGroups": 1,
+    "largestExactDuplicateGroup": 30
+  },
+  "ordering": {
+    "sequenceRegressions": [],
+    "sourceTimestampRegressions": []
+  },
+  "queue": {
+    "overflowCount": 0,
+    "droppedCount": 0,
+    "incomplete": true
+  },
+  "warmStartGap": {
+    "present": true,
+    "reason": "observer started after the selected match was already live; no historical stream assumed",
+    "fromUtc": "2026-09-12T17:20:28.676Z"
+  },
+  "connections": [
+    {
+      "connectionId": "primary",
+      "webSocketConnectStart": "37950940895300",
+      "webSocketEstablished": "37951277441600",
+      "mqttConnectSent": "37951277454900",
+      "connackReceived": null,
+      "subscribeSent": null,
+      "subackReceived": null,
+      "firstPublishReceived": null,
+      "disconnectReceived": "37966369045800",
+      "reconnectStarted": null,
+      "reconnectEstablished": null,
+      "requestedFilters": [
+        {
+          "filter": "#",
+          "qos": 0
+        }
+      ],
+      "requestedQos": [
+        0
+      ],
+      "grantedQos": null,
+      "connack": null,
+      "suback": null,
+      "errors": [
+        {
+          "type": "websocket",
+          "message": ""
+        }
+      ]
+    }
+  ],
+  "signalRace": {
+    "T0": null,
+    "T1": null,
+    "T2": null,
+    "T3": null,
+    "T4": null,
+    "T5": null,
+    "winners": {
+      "T1": null,
+      "T3": null,
+      "T4": null
+    },
+    "deltas": {
+      "T1_minus_T0": null,
+      "T2_minus_T0": null,
+      "T3_minus_T0": null,
+      "T4_minus_T0": null,
+      "T5_minus_winning_signal": null
+    },
+    "resultCount": 0,
+    "firstResult": null
+  },
+  "winnerAnalyses": [],
+  "recommendation": "No verified production winner trigger was established in this capture."
+}

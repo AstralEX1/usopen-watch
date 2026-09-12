@@ -1,0 +1,221 @@
+2026-09-12T17:52:54.791Z HTTP #5 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:52:55.375Z HTTP #6 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:52:55.891Z HTTP #7 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:52:56.386Z HTTP #8 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:52:56.910Z HTTP #11 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:52:57.422Z HTTP #12 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:52:57.556Z MQTT #13 mqtt probe topic=events/tennis/2026/uso/score/21601 status=In Progress score=6
+2026-09-12T17:52:57.557Z MQTT #14 mqtt target topic=events/tennis/2026/uso/score/21601 status=In Progress score=6
+2026-09-12T17:52:57.616Z MQTT #15 mqtt target topic=events/tennis/2026/uso/stat/21601
+2026-09-12T17:52:57.620Z MQTT #16 mqtt probe topic=events/tennis/2026/uso/stat/21601
+2026-09-12T17:52:57.934Z HTTP #17 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:52:58.450Z HTTP #18 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:52:58.997Z HTTP #19 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:52:59.206Z MATCHWINNER #20 mqtt target topic=events/tennis/2026/uso/slamtracker/21601
+2026-09-12T17:52:59.480Z HTTP #21 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:52:59.976Z HTTP #22 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:00.489Z HTTP #23 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:01.002Z HTTP #24 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:01.518Z HTTP #25 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:02.033Z HTTP #26 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:02.547Z HTTP #27 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:03.063Z HTTP #28 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:03.571Z HTTP #29 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:04.083Z HTTP #30 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:04.596Z HTTP #31 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:05.109Z HTTP #32 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:05.619Z HTTP #33 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:06.125Z HTTP #34 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:06.633Z HTTP #35 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:07.143Z HTTP #36 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:07.646Z HTTP #37 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:08.157Z HTTP #38 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:08.653Z HTTP #39 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:09.165Z HTTP #40 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:09.679Z HTTP #42 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:10.186Z HTTP #43 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:10.689Z HTTP #44 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:11.196Z HTTP #45 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:11.702Z HTTP #46 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:12.203Z HTTP #47 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:12.714Z HTTP #48 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:13.227Z HTTP #49 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:13.728Z HTTP #50 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:14.239Z HTTP #51 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:14.753Z HTTP #52 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:15.255Z HTTP #53 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:15.762Z HTTP #54 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:16.267Z HTTP #55 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:16.775Z HTTP #56 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:17.278Z HTTP #57 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:17.783Z HTTP #58 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:18.291Z HTTP #59 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:18.789Z HTTP #60 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:19.302Z HTTP #61 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:19.807Z HTTP #62 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:20.317Z HTTP #63 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:20.820Z HTTP #64 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:21.314Z HTTP #65 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:21.825Z HTTP #66 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:22.345Z HTTP #67 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:22.855Z HTTP #68 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:23.367Z HTTP #69 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:23.884Z HTTP #70 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:24.391Z HTTP #72 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:24.980Z HTTP #73 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:25.419Z HTTP #74 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:25.933Z HTTP #75 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:26.440Z HTTP #76 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:26.938Z HTTP #77 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:27.468Z HTTP #78 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:27.974Z HTTP #79 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:28.486Z HTTP #80 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:28.997Z HTTP #81 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:29.505Z HTTP #82 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:30.021Z HTTP #83 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:30.527Z HTTP #84 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:31.027Z HTTP #85 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:31.533Z HTTP #86 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:32.042Z HTTP #87 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:32.547Z HTTP #88 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:33.059Z HTTP #89 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:33.565Z HTTP #90 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:33.814Z MQTT #91 mqtt target topic=events/tennis/2026/uso/score/21601 status=In Progress score=6
+2026-09-12T17:53:33.916Z MQTT #92 mqtt target topic=events/tennis/2026/uso/stat/21601
+2026-09-12T17:53:34.071Z HTTP #93 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:34.579Z HTTP #94 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:35.088Z HTTP #95 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:35.588Z MATCHWINNER #96 mqtt target topic=events/tennis/2026/uso/slamtracker/21601
+2026-09-12T17:53:35.598Z HTTP #97 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:36.111Z HTTP #98 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:36.620Z HTTP #99 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:37.134Z HTTP #100 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:37.648Z HTTP #101 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:38.162Z HTTP #102 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:38.668Z HTTP #103 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:39.176Z HTTP #104 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:39.688Z HTTP #106 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:40.201Z HTTP #107 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:40.710Z HTTP #108 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:41.221Z HTTP #109 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:41.731Z HTTP #110 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:42.245Z HTTP #111 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:42.759Z HTTP #112 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:43.269Z HTTP #113 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:43.788Z HTTP #114 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:44.304Z HTTP #115 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:44.808Z HTTP #116 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:45.318Z HTTP #117 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:45.828Z HTTP #118 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:46.340Z HTTP #119 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:46.846Z HTTP #120 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:47.361Z HTTP #121 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:47.869Z HTTP #122 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:48.385Z HTTP #123 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:48.888Z HTTP #124 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:49.395Z HTTP #125 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:49.908Z HTTP #126 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:50.427Z HTTP #127 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:50.924Z HTTP #128 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:51.437Z HTTP #129 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:51.950Z HTTP #130 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:52.451Z HTTP #131 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:52.958Z HTTP #132 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:53.473Z HTTP #133 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:53.986Z HTTP #134 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:54.506Z HTTP #136 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:55.018Z HTTP #137 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:55.525Z HTTP #138 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:56.038Z HTTP #139 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:56.550Z HTTP #140 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:57.068Z HTTP #141 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:57.570Z HTTP #142 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:58.087Z HTTP #143 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:58.591Z HTTP #144 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:59.098Z HTTP #145 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:53:59.611Z HTTP #146 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:00.120Z HTTP #147 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:00.644Z HTTP #148 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:01.147Z HTTP #149 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:01.656Z HTTP #150 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:02.171Z HTTP #151 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:02.674Z HTTP #152 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:03.186Z HTTP #153 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:03.693Z HTTP #154 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:04.205Z HTTP #155 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:04.716Z HTTP #156 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:05.232Z HTTP #157 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:05.736Z HTTP #158 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:06.248Z HTTP #159 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:06.755Z HTTP #160 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:07.267Z HTTP #161 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:07.779Z HTTP #162 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:08.292Z HTTP #163 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:08.795Z HTTP #164 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:09.299Z HTTP #165 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:09.808Z HTTP #167 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:10.316Z HTTP #168 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:10.812Z HTTP #169 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:11.336Z HTTP #170 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:11.849Z HTTP #171 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:12.361Z HTTP #172 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:12.876Z HTTP #173 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:13.386Z HTTP #174 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:13.884Z HTTP #175 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:14.107Z MQTT #176 mqtt target topic=events/tennis/2026/uso/score/21601 status=In Progress score=6
+2026-09-12T17:54:14.158Z MQTT #177 mqtt target topic=events/tennis/2026/uso/stat/21601
+2026-09-12T17:54:14.395Z HTTP #178 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:14.906Z HTTP #179 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:15.420Z HTTP #180 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:15.932Z HTTP #181 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:16.440Z HTTP #182 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:16.949Z HTTP #183 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:17.464Z HTTP #184 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:17.976Z HTTP #185 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:18.473Z HTTP #186 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:19.005Z HTTP #187 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:19.518Z HTTP #188 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:20.010Z HTTP #189 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:20.543Z HTTP #190 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:21.052Z HTTP #191 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:21.567Z HTTP #192 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:22.079Z HTTP #193 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:22.215Z MQTT #194 mqtt target topic=events/tennis/2026/uso/score/21601 status=In Progress winner=2 score=7
+2026-09-12T17:54:22.275Z MQTT #195 mqtt target topic=events/tennis/2026/uso/stat/21601
+2026-09-12T17:54:22.593Z HTTP #196 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:23.106Z HTTP #197 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress score=6
+2026-09-12T17:54:23.606Z HTTP #198 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:24.118Z HTTP #199 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:24.290Z MQTT #200 mqtt target topic=events/tennis/2026/uso/stat/21601
+2026-09-12T17:54:24.629Z HTTP #202 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:25.141Z HTTP #203 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:25.653Z HTTP #204 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:26.112Z MATCHWINNER #205 mqtt target topic=events/tennis/2026/uso/slamtracker/21601 winner=2
+2026-09-12T17:54:26.166Z HTTP #206 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:26.675Z HTTP #207 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:27.191Z HTTP #208 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:27.696Z HTTP #209 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:28.206Z HTTP #210 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:28.718Z HTTP #211 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:29.230Z HTTP #212 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:29.743Z HTTP #213 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:30.259Z HTTP #214 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:30.766Z HTTP #215 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:31.279Z HTTP #216 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:31.790Z HTTP #217 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:32.305Z HTTP #218 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:32.807Z HTTP #219 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:33.306Z HTTP #220 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:33.604Z MQTT #221 mqtt target topic=events/tennis/2026/uso/mip
+2026-09-12T17:54:33.626Z MQTT #222 mqtt target topic=events/tennis/2026/uso/score/21601 status=Completed winner=2 score=7
+2026-09-12T17:54:33.641Z MQTT #223 mqtt target topic=events/tennis/2026/uso/stat/21601
+2026-09-12T17:54:33.817Z HTTP #224 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:34.327Z HTTP #225 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:34.842Z HTTP #226 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:35.355Z HTTP #227 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:35.860Z HTTP #228 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=In Progress winner=2 score=7
+2026-09-12T17:54:36.366Z HTTP #229 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=Completed winner=2 score=7
+2026-09-12T17:54:36.874Z HTTP #230 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=Completed winner=2 score=7
+2026-09-12T17:54:37.380Z HTTP #231 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=Completed winner=2 score=7
+2026-09-12T17:54:37.891Z HTTP #232 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=Completed winner=2 score=7
+2026-09-12T17:54:38.396Z HTTP #233 http http topic=https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json status=Completed winner=2 score=7

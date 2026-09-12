@@ -1,0 +1,160 @@
+{
+  "targetMatchId": "3601",
+  "topics": {
+    "events/tennis/2026/uso/score/3601": {
+      "topic": "events/tennis/2026/uso/score/3601",
+      "phases": {
+        "target": 15
+      },
+      "eventTypes": {
+        "unknown": 15
+      },
+      "matchIds": {
+        "3601": 15
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 15,
+      "likely": "snapshot-or-state"
+    },
+    "events/tennis/2026/uso/stat/3601": {
+      "topic": "events/tennis/2026/uso/stat/3601",
+      "phases": {
+        "target": 6
+      },
+      "eventTypes": {
+        "unknown": 6
+      },
+      "matchIds": {
+        "3601": 6
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 6,
+      "likely": "event-or-delta"
+    },
+    "events/tennis/2026/uso/slamtracker/3601": {
+      "topic": "events/tennis/2026/uso/slamtracker/3601",
+      "phases": {
+        "target": 6
+      },
+      "eventTypes": {
+        "MatchWinner": 6
+      },
+      "matchIds": {
+        "3601": 6
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 6,
+      "likely": "event-or-delta"
+    },
+    "events/tennis/2026/uso/score/21601": {
+      "topic": "events/tennis/2026/uso/score/21601",
+      "phases": {
+        "discovery": 12
+      },
+      "eventTypes": {
+        "unknown": 12
+      },
+      "matchIds": {
+        "21601": 12
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 12,
+      "likely": "snapshot-or-state"
+    },
+    "events/tennis/2026/uso/stat/21601": {
+      "topic": "events/tennis/2026/uso/stat/21601",
+      "phases": {
+        "discovery": 11
+      },
+      "eventTypes": {
+        "unknown": 11
+      },
+      "matchIds": {
+        "21601": 11
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 11,
+      "likely": "event-or-delta"
+    },
+    "events/tennis/2026/uso/slamtracker/21601": {
+      "topic": "events/tennis/2026/uso/slamtracker/21601",
+      "phases": {
+        "discovery": 7
+      },
+      "eventTypes": {
+        "MatchWinner": 7
+      },
+      "matchIds": {
+        "21601": 7
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 7,
+      "likely": "event-or-delta"
+    }
+  },
+  "targetTopics": [
+    {
+      "topic": "events/tennis/2026/uso/score/3601",
+      "phases": {
+        "target": 15
+      },
+      "eventTypes": {
+        "unknown": 15
+      },
+      "matchIds": {
+        "3601": 15
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 15,
+      "likely": "snapshot-or-state"
+    },
+    {
+      "topic": "events/tennis/2026/uso/stat/3601",
+      "phases": {
+        "target": 6
+      },
+      "eventTypes": {
+        "unknown": 6
+      },
+      "matchIds": {
+        "3601": 6
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 6,
+      "likely": "event-or-delta"
+    },
+    {
+      "topic": "events/tennis/2026/uso/slamtracker/3601",
+      "phases": {
+        "target": 6
+      },
+      "eventTypes": {
+        "MatchWinner": 6
+      },
+      "matchIds": {
+        "3601": 6
+      },
+      "qos": [
+        0
+      ],
+      "publishCount": 6,
+      "likely": "event-or-delta"
+    }
+  ]
+}

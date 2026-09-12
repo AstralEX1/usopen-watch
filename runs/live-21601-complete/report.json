@@ -1,0 +1,218 @@
+{
+  "matchId": "21601",
+  "eventCount": 221,
+  "counts": {
+    "bySource": {
+      "http": 204,
+      "mqtt": 17
+    },
+    "byPhase": {
+      "http": 204,
+      "probe": 2,
+      "target": 15
+    },
+    "byTopic": {
+      "https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json": 204,
+      "events/tennis/2026/uso/score/21601": 6,
+      "events/tennis/2026/uso/stat/21601": 7,
+      "events/tennis/2026/uso/slamtracker/21601": 3,
+      "events/tennis/2026/uso/mip": 1
+    },
+    "byType": {
+      "unknown": 218,
+      "MatchWinner": 3
+    }
+  },
+  "duplicates": {
+    "exactDuplicateGroups": 8,
+    "largestExactDuplicateGroup": 77
+  },
+  "ordering": {
+    "sequenceRegressions": [],
+    "sourceTimestampRegressions": [
+      {
+        "recvSeq": 20,
+        "sourceTimestamp": "1789235559"
+      },
+      {
+        "recvSeq": 96,
+        "sourceTimestamp": "1789235600"
+      },
+      {
+        "recvSeq": 205,
+        "sourceTimestamp": "1789235649"
+      }
+    ]
+  },
+  "queue": {
+    "overflowCount": 0,
+    "droppedCount": 0,
+    "incomplete": false
+  },
+  "warmStartGap": {
+    "present": true,
+    "reason": "observer started after the selected match was already live; no historical stream assumed",
+    "fromUtc": "2026-09-12T17:52:53.731Z"
+  },
+  "connections": [
+    {
+      "connectionId": "primary",
+      "webSocketConnectStart": "39895962919100",
+      "webSocketEstablished": "39896510007200",
+      "mqttConnectSent": "39896510020200",
+      "connackReceived": "39896585426900",
+      "subscribeSent": "39896585644300",
+      "subackReceived": "39896658658100",
+      "firstPublishReceived": "39899787847800",
+      "disconnectReceived": "40000993638200",
+      "reconnectStarted": null,
+      "reconnectEstablished": null,
+      "requestedFilters": [
+        {
+          "filter": "events/tennis/2026/uso/#",
+          "qos": 0
+        }
+      ],
+      "requestedQos": [
+        0
+      ],
+      "grantedQos": [
+        0
+      ],
+      "rejectedQos": [],
+      "connack": {
+        "sessionPresent": false,
+        "returnCode": 0
+      },
+      "suback": {
+        "packetId": 1,
+        "grantedQos": [
+          0
+        ]
+      },
+      "errors": [],
+      "disconnectCode": 1005,
+      "disconnectReason": ""
+    },
+    {
+      "connectionId": "reconnect-probe",
+      "webSocketConnectStart": "39896510693100",
+      "webSocketEstablished": "39896831697000",
+      "mqttConnectSent": "39896831707100",
+      "connackReceived": "39896909395800",
+      "subscribeSent": "39896909477700",
+      "subackReceived": "39896986218400",
+      "firstPublishReceived": null,
+      "disconnectReceived": "39898426428100",
+      "reconnectStarted": "39898345101800",
+      "reconnectEstablished": null,
+      "requestedFilters": [
+        {
+          "filter": "events/tennis/2026/uso/#",
+          "qos": 0
+        }
+      ],
+      "requestedQos": [
+        0
+      ],
+      "grantedQos": [
+        0
+      ],
+      "rejectedQos": [],
+      "connack": {
+        "sessionPresent": false,
+        "returnCode": 0
+      },
+      "suback": {
+        "packetId": 1,
+        "grantedQos": [
+          0
+        ]
+      },
+      "errors": [],
+      "attempt": "initial",
+      "disconnectCode": 1005,
+      "disconnectReason": ""
+    },
+    {
+      "connectionId": "reconnect-probe",
+      "webSocketConnectStart": "39898548611800",
+      "webSocketEstablished": "39898862156900",
+      "mqttConnectSent": "39898862158700",
+      "connackReceived": "39898938280900",
+      "subscribeSent": "39898938342000",
+      "subackReceived": "39899010686500",
+      "firstPublishReceived": "39899786420600",
+      "disconnectReceived": "39899936670400",
+      "reconnectStarted": "39898345101800",
+      "reconnectEstablished": "39898862156900",
+      "requestedFilters": [
+        {
+          "filter": "events/tennis/2026/uso/#",
+          "qos": 0
+        }
+      ],
+      "requestedQos": [
+        0
+      ],
+      "grantedQos": [
+        0
+      ],
+      "rejectedQos": [],
+      "connack": {
+        "sessionPresent": false,
+        "returnCode": 0
+      },
+      "suback": {
+        "packetId": 1,
+        "grantedQos": [
+          0
+        ]
+      },
+      "errors": [],
+      "attempt": "reconnect",
+      "disconnectCode": 1005,
+      "disconnectReason": ""
+    }
+  ],
+  "signalRace": {
+    "T0": "39988342286000",
+    "T1": "39988342286000",
+    "T2": "39995856695600",
+    "T3": "39984444838900",
+    "T4": "39985836035300",
+    "T5": "39984445493900",
+    "winners": {
+      "T1": "2",
+      "T3": "2",
+      "T4": "2"
+    },
+    "deltas": {
+      "T1_minus_T0": "0",
+      "T2_minus_T0": "7514409600",
+      "T3_minus_T0": "-3897447100",
+      "T4_minus_T0": "-2506250700",
+      "T5_minus_winning_signal": "2600"
+    },
+    "resultCount": 1,
+    "firstResult": {
+      "winner": "2",
+      "recvSeq": 194,
+      "at": "39984444838900"
+    }
+  },
+  "winnerAnalyses": [
+    {
+      "recvSeq": 194,
+      "connectionId": "primary",
+      "topic": "events/tennis/2026/uso/score/21601",
+      "W0": "39984444838900",
+      "W1": "39984444925400",
+      "W2": "39984445434900",
+      "W3": "39984445491300",
+      "W4": "39984445493900",
+      "winner": "2"
+    }
+  ],
+  "recommendation": "MatchWinner matched the explicit score winner in this capture; keep a production cross-check until more matches are observed."
+}

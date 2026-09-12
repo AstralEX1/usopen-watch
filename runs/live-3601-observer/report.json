@@ -1,0 +1,256 @@
+{
+  "matchId": "3601",
+  "eventCount": 600,
+  "counts": {
+    "bySource": {
+      "http": 543,
+      "mqtt": 57
+    },
+    "byPhase": {
+      "http": 543,
+      "target": 27,
+      "discovery": 30
+    },
+    "byTopic": {
+      "https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json": 543,
+      "events/tennis/2026/uso/score/3601": 15,
+      "events/tennis/2026/uso/stat/3601": 6,
+      "events/tennis/2026/uso/slamtracker/3601": 6,
+      "events/tennis/2026/uso/score/21601": 12,
+      "events/tennis/2026/uso/stat/21601": 11,
+      "events/tennis/2026/uso/slamtracker/21601": 7
+    },
+    "byType": {
+      "unknown": 587,
+      "MatchWinner": 13
+    }
+  },
+  "duplicates": {
+    "exactDuplicateGroups": 21,
+    "largestExactDuplicateGroup": 51
+  },
+  "ordering": {
+    "sequenceRegressions": [],
+    "sourceTimestampRegressions": [
+      {
+        "recvSeq": 36,
+        "sourceTimestamp": "1789235229"
+      },
+      {
+        "recvSeq": 64,
+        "sourceTimestamp": "1789235218"
+      },
+      {
+        "recvSeq": 147,
+        "sourceTimestamp": "1789235263"
+      },
+      {
+        "recvSeq": 177,
+        "sourceTimestamp": "1789235292"
+      },
+      {
+        "recvSeq": 225,
+        "sourceTimestamp": "1789235313"
+      },
+      {
+        "recvSeq": 255,
+        "sourceTimestamp": "1789235328"
+      },
+      {
+        "recvSeq": 326,
+        "sourceTimestamp": "1789235354"
+      },
+      {
+        "recvSeq": 359,
+        "sourceTimestamp": "1789235361"
+      },
+      {
+        "recvSeq": 448,
+        "sourceTimestamp": "1789235404"
+      },
+      {
+        "recvSeq": 518,
+        "sourceTimestamp": "1789235427"
+      },
+      {
+        "recvSeq": 548,
+        "sourceTimestamp": "1789235455"
+      },
+      {
+        "recvSeq": 618,
+        "sourceTimestamp": "1789235477"
+      }
+    ]
+  },
+  "queue": {
+    "overflowCount": 0,
+    "droppedCount": 0,
+    "incomplete": false
+  },
+  "warmStartGap": {
+    "present": true,
+    "reason": "observer started after the selected match was already live; no historical stream assumed",
+    "fromUtc": "2026-09-12T17:47:07.060Z"
+  },
+  "connections": [
+    {
+      "connectionId": "primary",
+      "webSocketConnectStart": "39549291761900",
+      "webSocketEstablished": "39549822228500",
+      "mqttConnectSent": "39549822242400",
+      "connackReceived": "39549898293100",
+      "subscribeSent": "39549898573700",
+      "subackReceived": "39549972852800",
+      "firstPublishReceived": "39553708334800",
+      "disconnectReceived": "39826614471300",
+      "reconnectStarted": null,
+      "reconnectEstablished": null,
+      "requestedFilters": [
+        {
+          "filter": "events/tennis/2026/uso/#",
+          "qos": 0
+        }
+      ],
+      "requestedQos": [
+        0
+      ],
+      "grantedQos": [
+        0
+      ],
+      "rejectedQos": [],
+      "connack": {
+        "sessionPresent": false,
+        "returnCode": 0
+      },
+      "suback": {
+        "packetId": 1,
+        "grantedQos": [
+          0
+        ]
+      },
+      "errors": [],
+      "disconnectCode": 1005,
+      "disconnectReason": ""
+    },
+    {
+      "connectionId": "reconnect-probe",
+      "webSocketConnectStart": "39549823307400",
+      "webSocketEstablished": "39550143975200",
+      "mqttConnectSent": "39550143988500",
+      "connackReceived": "39550221540900",
+      "subscribeSent": "39550221655700",
+      "subackReceived": "39550297236700",
+      "firstPublishReceived": null,
+      "disconnectReceived": "39551724778500",
+      "reconnectStarted": "39551646013100",
+      "reconnectEstablished": null,
+      "requestedFilters": [
+        {
+          "filter": "events/tennis/2026/uso/#",
+          "qos": 0
+        }
+      ],
+      "requestedQos": [
+        0
+      ],
+      "grantedQos": [
+        0
+      ],
+      "rejectedQos": [],
+      "connack": {
+        "sessionPresent": false,
+        "returnCode": 0
+      },
+      "suback": {
+        "packetId": 1,
+        "grantedQos": [
+          0
+        ]
+      },
+      "errors": [],
+      "attempt": "initial",
+      "disconnectCode": 1005,
+      "disconnectReason": ""
+    },
+    {
+      "connectionId": "reconnect-probe",
+      "webSocketConnectStart": "39551861839400",
+      "webSocketEstablished": "39552169441800",
+      "mqttConnectSent": "39552169443400",
+      "connackReceived": "39552241763300",
+      "subscribeSent": "39552241823200",
+      "subackReceived": "39552315239700",
+      "firstPublishReceived": null,
+      "disconnectReceived": "39553256304700",
+      "reconnectStarted": "39551646013100",
+      "reconnectEstablished": "39552169441800",
+      "requestedFilters": [
+        {
+          "filter": "events/tennis/2026/uso/#",
+          "qos": 0
+        }
+      ],
+      "requestedQos": [
+        0
+      ],
+      "grantedQos": [
+        0
+      ],
+      "rejectedQos": [],
+      "connack": {
+        "sessionPresent": false,
+        "returnCode": 0
+      },
+      "suback": {
+        "packetId": 1,
+        "grantedQos": [
+          0
+        ]
+      },
+      "errors": [],
+      "attempt": "reconnect",
+      "disconnectCode": 1005,
+      "disconnectReason": ""
+    }
+  ],
+  "signalRace": {
+    "T0": "39823627776500",
+    "T1": "39823627776500",
+    "T2": null,
+    "T3": "39822719473400",
+    "T4": null,
+    "T5": "39822719786500",
+    "winners": {
+      "T1": "1",
+      "T3": "1",
+      "T4": null
+    },
+    "deltas": {
+      "T1_minus_T0": "0",
+      "T2_minus_T0": null,
+      "T3_minus_T0": "-908303100",
+      "T4_minus_T0": null,
+      "T5_minus_winning_signal": "1200"
+    },
+    "resultCount": 1,
+    "firstResult": {
+      "winner": "1",
+      "recvSeq": 614,
+      "at": "39822719473400"
+    }
+  },
+  "winnerAnalyses": [
+    {
+      "recvSeq": 614,
+      "connectionId": "primary",
+      "topic": "events/tennis/2026/uso/score/3601",
+      "W0": "39822719473400",
+      "W1": "39822719530100",
+      "W2": "39822719757100",
+      "W3": "39822719785300",
+      "W4": "39822719786500",
+      "winner": "1"
+    }
+  ],
+  "recommendation": "MatchWinner matched the explicit score winner in this capture; keep a production cross-check until more matches are observed."
+}

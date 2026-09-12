@@ -1,0 +1,189 @@
+{
+  "observer": "usopen-watch",
+  "version": 1,
+  "matchId": "21601",
+  "outputDir": "C:\\Users\\alexe\\Documents\\Codex\\2026-09-12\\files-pasted-by-the-user-you\\outputs\\usopen-watch\\runs\\live-21601-complete",
+  "mqttUrl": "wss://scores.usopen.org:443/mqtt2",
+  "httpUrls": [
+    "https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json"
+  ],
+  "mqttProtocol": "3.1.1",
+  "requestedQos": 0,
+  "primaryConnectionId": "primary",
+  "collection": {
+    "matchId": "21601",
+    "startedUtc": "2026-09-12T17:52:53.731Z",
+    "startedMonoNs": "39895961858200",
+    "completeness": "warm-start-partial",
+    "warmStartGap": {
+      "present": true,
+      "reason": "observer started after the selected match was already live; no historical stream assumed",
+      "fromUtc": "2026-09-12T17:52:53.731Z"
+    },
+    "overflowCount": 0,
+    "droppedCount": 0,
+    "errors": [],
+    "result": {
+      "type": "MATCH_RESULT",
+      "winner": "2",
+      "recvSeq": 194,
+      "emittedMonoNs": "39984445493900"
+    },
+    "httpWinnerSeen": true,
+    "terminalSeen": true,
+    "finishedUtc": "2026-09-12T17:54:38.635Z",
+    "finishedMonoNs": "40000865381600",
+    "stopReason": "terminal-settle"
+  },
+  "connections": [
+    {
+      "connectionId": "primary",
+      "webSocketConnectStart": "39895962919100",
+      "webSocketEstablished": "39896510007200",
+      "mqttConnectSent": "39896510020200",
+      "connackReceived": "39896585426900",
+      "subscribeSent": "39896585644300",
+      "subackReceived": "39896658658100",
+      "firstPublishReceived": "39899787847800",
+      "disconnectReceived": "40000993638200",
+      "reconnectStarted": null,
+      "reconnectEstablished": null,
+      "requestedFilters": [
+        {
+          "filter": "events/tennis/2026/uso/#",
+          "qos": 0
+        }
+      ],
+      "requestedQos": [
+        0
+      ],
+      "grantedQos": [
+        0
+      ],
+      "rejectedQos": [],
+      "connack": {
+        "sessionPresent": false,
+        "returnCode": 0
+      },
+      "suback": {
+        "packetId": 1,
+        "grantedQos": [
+          0
+        ]
+      },
+      "errors": [],
+      "disconnectCode": 1005,
+      "disconnectReason": ""
+    },
+    {
+      "connectionId": "reconnect-probe",
+      "webSocketConnectStart": "39896510693100",
+      "webSocketEstablished": "39896831697000",
+      "mqttConnectSent": "39896831707100",
+      "connackReceived": "39896909395800",
+      "subscribeSent": "39896909477700",
+      "subackReceived": "39896986218400",
+      "firstPublishReceived": null,
+      "disconnectReceived": "39898426428100",
+      "reconnectStarted": "39898345101800",
+      "reconnectEstablished": null,
+      "requestedFilters": [
+        {
+          "filter": "events/tennis/2026/uso/#",
+          "qos": 0
+        }
+      ],
+      "requestedQos": [
+        0
+      ],
+      "grantedQos": [
+        0
+      ],
+      "rejectedQos": [],
+      "connack": {
+        "sessionPresent": false,
+        "returnCode": 0
+      },
+      "suback": {
+        "packetId": 1,
+        "grantedQos": [
+          0
+        ]
+      },
+      "errors": [],
+      "attempt": "initial",
+      "disconnectCode": 1005,
+      "disconnectReason": ""
+    },
+    {
+      "connectionId": "reconnect-probe",
+      "webSocketConnectStart": "39898548611800",
+      "webSocketEstablished": "39898862156900",
+      "mqttConnectSent": "39898862158700",
+      "connackReceived": "39898938280900",
+      "subscribeSent": "39898938342000",
+      "subackReceived": "39899010686500",
+      "firstPublishReceived": "39899786420600",
+      "disconnectReceived": "39899936670400",
+      "reconnectStarted": "39898345101800",
+      "reconnectEstablished": "39898862156900",
+      "requestedFilters": [
+        {
+          "filter": "events/tennis/2026/uso/#",
+          "qos": 0
+        }
+      ],
+      "requestedQos": [
+        0
+      ],
+      "grantedQos": [
+        0
+      ],
+      "rejectedQos": [],
+      "connack": {
+        "sessionPresent": false,
+        "returnCode": 0
+      },
+      "suback": {
+        "packetId": 1,
+        "grantedQos": [
+          0
+        ]
+      },
+      "errors": [],
+      "attempt": "reconnect",
+      "disconnectCode": 1005,
+      "disconnectReason": ""
+    }
+  ],
+  "analysisCount": 1,
+  "report": {
+    "eventCount": 221,
+    "signalRace": {
+      "T0": "39988342286000",
+      "T1": "39988342286000",
+      "T2": "39995856695600",
+      "T3": "39984444838900",
+      "T4": "39985836035300",
+      "T5": "39984445493900",
+      "winners": {
+        "T1": "2",
+        "T3": "2",
+        "T4": "2"
+      },
+      "deltas": {
+        "T1_minus_T0": "0",
+        "T2_minus_T0": "7514409600",
+        "T3_minus_T0": "-3897447100",
+        "T4_minus_T0": "-2506250700",
+        "T5_minus_winning_signal": "2600"
+      },
+      "resultCount": 1,
+      "firstResult": {
+        "winner": "2",
+        "recvSeq": 194,
+        "at": "39984444838900"
+      }
+    }
+  }
+}
