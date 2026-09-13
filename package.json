@@ -1,0 +1,15 @@
+{
+  "name": "usopen-watch",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "bench": "node bench/hot-path.mjs"
+  },
+  "dependencies": {
+    "ethers": "^6.15.0"
+  }
+}

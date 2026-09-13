@@ -17,16 +17,17 @@ import {
 } from './mqtt.mjs';
 import {
   BoundedEventQueue,
-  WinnerDetector,
   createReceiver,
   parseDerivedEvent,
   serialiseRawEvent,
   toJsonSafe,
 } from './observer.mjs';
+import { FinalDetector, detectMatchEndImminent, waitForMensSinglesFinalists } from './final.mjs';
+import { formatReadiness, prepareProposer } from './proposer.mjs';
 import { readRawEvents, writeReports } from './report.mjs';
 
 export const MQTT_URL = 'wss://scores.usopen.org:443/mqtt2';
-export const MQTT_FILTER = 'events/tennis/2026/uso/#';
+export const MQTT_FILTER = 'events/tennis/2026/uso/score/+';
 export const HTTP_URL = 'https://www.usopen.org/en_US/scores/feeds/2026/matches/live/scores.json';
 export const DEFAULT_HTTP_INTERVAL_MS = 500;
 export const DEFAULT_SETTLE_MS = 10_000;
@@ -64,6 +65,7 @@ export function buildMqttConnection({
   sequence = moduleSequence,
   onConnAck = () => {},
   onSubAck = () => {},
+  onHotEvent = null,
 }) {
   const packetIds = { value: 0 };
   let sender = send;
@@ -98,6 +100,7 @@ export function buildMqttConnection({
     onOverflow: recorder.onOverflow,
     onEnqueue: recorder.onEnqueue,
     onControlPacket: handleControlPacket,
+    onHotEvent,
   });
 
   function sendConnect(clientId = `usopen-watch-${connectionId}`) {
@@ -241,7 +244,7 @@ export function recordHttpResponse({
   };
 }
 
-async function pollHttp({ url, matchId, queue, sequence, onOverflow }) {
+async function pollHttp({ url, matchId, queue, sequence, onOverflow, onHotEvent }) {
   const requestStartMonoNs = monoNow();
   try {
     const response = await fetch(url, {
@@ -283,6 +286,15 @@ async function pollHttp({ url, matchId, queue, sequence, onOverflow }) {
     }
     event.matchId = matchId;
     event.httpParsed = parsed;
+    event.payload = parsed;
+    if (onHotEvent) {
+      try {
+        const derived = onHotEvent(event);
+        if (derived && typeof derived === 'object') event._hotDerived = derived;
+      } catch (error) {
+        event.hotPathError = error instanceof Error ? error.message : String(error);
+      }
+    }
     if (!queue.push(event)) onOverflow?.({ source: 'http', url, recvSeq: event.recvSeq });
     return event;
   } catch (error) {
@@ -400,7 +412,7 @@ function delay(ms) {
   return new Promise((resolvePromise) => setTimeout(resolvePromise, ms));
 }
 
-async function startReconnectProbe({ mqttUrl, filters, recorder, sequence, connections, sockets, control }) {
+async function startReconnectProbe({ mqttUrl, filters, recorder, sequence, connections, sockets, control, onHotEvent }) {
   const connect = (attempt) => {
     const connection = buildMqttConnection({
       connectionId: 'reconnect-probe',
@@ -409,6 +421,7 @@ async function startReconnectProbe({ mqttUrl, filters, recorder, sequence, conne
       recorder,
       sequence,
       onConnAck: (_connack, current) => current.sendSubscribe(),
+      onHotEvent,
     });
     connection.lifecycle.attempt = attempt;
     connections.push(connection.lifecycle);
@@ -447,15 +460,16 @@ async function writeJson(path, value) {
 function parseArgs(argv) {
   const args = [...argv];
   const command = args.shift();
-  const matchId = args.shift();
+  const matchId = args[0] && !String(args[0]).startsWith('--') ? args.shift() : null;
   const options = {
     outputDir: null,
     httpIntervalMs: DEFAULT_HTTP_INTERVAL_MS,
     settleMs: DEFAULT_SETTLE_MS,
     queueSize: DEFAULT_QUEUE_SIZE,
     mqttUrl: MQTT_URL,
-    httpUrls: [HTTP_URL],
+    httpUrls: [],
     reconnectProbe: false,
+    startupPollMs: 1_000,
   };
   for (let index = 0; index < args.length; index += 1) {
     const arg = args[index];
@@ -466,7 +480,9 @@ function parseArgs(argv) {
     else if (arg === '--mqtt-url') options.mqttUrl = args[++index];
     else if (arg === '--http-url') options.httpUrls.push(args[++index]);
     else if (arg === '--reconnect-probe') options.reconnectProbe = true;
+    else if (arg === '--startup-poll-ms') options.startupPollMs = Number(args[++index]);
   }
+  if (!options.httpUrls.length) options.httpUrls.push(HTTP_URL);
   return { command, matchId, options };
 }
 
@@ -477,7 +493,10 @@ function defaultOutputDir(matchId) {
 
 export async function runObserve({
   matchId,
-  outputDir = defaultOutputDir(matchId),
+  proposer = null,
+  onFinal = null,
+  onImminent = null,
+  outputDir = null,
   httpIntervalMs = DEFAULT_HTTP_INTERVAL_MS,
   settleMs = DEFAULT_SETTLE_MS,
   queueSize = DEFAULT_QUEUE_SIZE,
@@ -486,6 +505,8 @@ export async function runObserve({
   reconnectProbe = false,
 }) {
   if (!matchId) throw new Error('matchId is required');
+  if (!/^[A-Za-z0-9_-]+$/.test(String(matchId))) throw new Error('matchId contains unsafe characters');
+  outputDir ??= defaultOutputDir(matchId);
   await mkdir(outputDir, { recursive: true });
   const queue = new BoundedEventQueue(queueSize);
   const sequence = { value: 0 };
@@ -503,15 +524,67 @@ export async function runObserve({
     droppedCount: 0,
     errors: [],
     result: null,
+    final: null,
     httpWinnerSeen: false,
     terminalSeen: false,
   };
   let stopResolve;
   const stopSignal = new Promise((resolvePromise) => { stopResolve = resolvePromise; });
-  let settleTimer = null;
-  const detector = new WinnerDetector();
   const analyses = [];
   const connections = [];
+  const finalHandler = onFinal ?? proposer?.handleFinal?.bind(proposer) ?? null;
+  let hotEvent = null;
+  const deliverFinal = (final) => {
+    state.result = final;
+    state.final = final;
+    state.terminalSeen = true;
+    state.proposerTelemetry = proposer?.telemetry ?? null;
+    if (hotEvent) {
+      hotEvent.latency ??= { W0: hotEvent.recvMonoNs, W1: monoNow() };
+      hotEvent.latency.W2 = final.detectedMonoNs;
+      analyses.push({
+        recvSeq: hotEvent.recvSeq ?? null,
+        connectionId: hotEvent.connectionId ?? null,
+        topic: hotEvent.topic ?? null,
+        W0: hotEvent.latency.W0,
+        W1: hotEvent.latency.W1,
+        W2: hotEvent.latency.W2,
+        winnerId: final.winnerId,
+        loserId: final.loserId,
+        sourceTimestamp: final.sourceTimestamp,
+      });
+    }
+    try {
+      const result = finalHandler?.(final);
+      if (result && typeof result.then === 'function') {
+        result.catch((error) => state.errors.push({
+          type: 'proposer',
+          error: error instanceof Error ? error.message : String(error),
+        }));
+      }
+    } catch (error) {
+      state.errors.push({ type: 'proposer', error: error instanceof Error ? error.message : String(error) });
+    }
+    stopResolve('match-final');
+  };
+  const detector = new FinalDetector({
+    targetMatchId: matchId,
+    onFinal: deliverFinal,
+    onError: (error) => state.errors.push({ type: 'final-callback', error: error.message }),
+  });
+  const onHotEvent = (event) => {
+    const derived = parseDerivedEvent(event, matchId);
+    const imminent = detectMatchEndImminent(derived, matchId);
+    if (imminent) {
+      try { onImminent?.(imminent); } catch (error) {
+        state.errors.push({ type: 'imminent-callback', error: error instanceof Error ? error.message : String(error) });
+      }
+    }
+    hotEvent = event;
+    detector.accept(derived);
+    hotEvent = null;
+    return derived;
+  };
   const overflow = (details) => {
     state.overflowCount = queue.overflowCount;
     state.droppedCount = queue.droppedCount;
@@ -526,52 +599,28 @@ export async function runObserve({
     onOverflow: overflow,
     onDerived: (derived, raw) => {
       if (derived.matchId !== String(matchId)) return;
-      const scheduleSettle = () => {
-        if (state.result && state.terminalSeen) {
-          settleTimer ??= setTimeout(() => stopResolve('terminal-settle'), settleMs);
-        }
-      };
       const matchStatus = derived.matchStatus ?? derived.status;
       if (matchStatus && /completed|retired|retirement|default|walkover/i.test(matchStatus)) {
         state.terminalSeen = true;
-        scheduleSettle();
       }
-      const candidate = Boolean(derived.winner)
-        || /matchwinner/i.test(derived.eventType ?? '');
-      if (!candidate) return;
-      const w2 = monoNow();
-      raw.latency ??= { W0: raw.recvMonoNs, W1: w2 };
-      raw.latency.W2 = w2;
-      const result = detector.emitCandidate(derived);
-      if (!result) return;
-      raw.latency.W3 = monoNow();
-      result.emittedMonoNs = monoNow();
-      raw.latency.W4 = result.emittedMonoNs;
-      state.result = result;
-      analyses.push({
-        recvSeq: raw.recvSeq,
-        connectionId: raw.connectionId,
-        topic: raw.topic ?? null,
-        W0: raw.latency.W0,
-        W1: raw.latency.W1,
-        W2: raw.latency.W2,
-        W3: raw.latency.W3,
-        W4: raw.latency.W4,
-        winner: result.winner,
-      });
-      scheduleSettle();
+      detector.accept(derived);
     },
   });
   await pipeline.start();
 
+  const matchFilters = [
+    { filter: `events/tennis/2026/uso/score/${matchId}`, qos: 0 },
+    { filter: `events/tennis/2026/uso/slamtracker/${matchId}`, qos: 0 },
+  ];
   const primary = buildMqttConnection({
     connectionId: 'primary',
-    phase: 'discovery',
-    filters: [{ filter: MQTT_FILTER, qos: 0 }],
+    phase: 'target',
+    filters: matchFilters,
     recorder: { queue, onOverflow: overflow, onEnqueue: () => pipeline.notify(), onControl: (packet) => {
       if (packet.type === 'malformed') state.errors.push(packet);
     } },
     sequence,
+    onHotEvent,
     onConnAck: (_connack, connection) => connection.sendSubscribe(),
     onSubAck: (suback) => {
       if (suback.grantedQos.some((qos) => qos === 0x80)) {
@@ -605,12 +654,13 @@ export async function runObserve({
     if (reconnectProbe) {
       probePromise = startReconnectProbe({
         mqttUrl,
-        filters: [{ filter: MQTT_FILTER, qos: 0 }],
+        filters: matchFilters,
         recorder: { queue, onOverflow: overflow, onEnqueue: () => pipeline.notify() },
         sequence,
         connections,
         sockets: probeSockets,
         control: probeControl,
+        onHotEvent,
       });
     }
   } catch (error) {
@@ -624,7 +674,7 @@ export async function runObserve({
     for (const url of httpUrls) {
       if (inFlight.has(url)) continue;
       inFlight.add(url);
-      pollHttp({ url, matchId, queue, sequence, onOverflow: overflow })
+      pollHttp({ url, matchId, queue, sequence, onOverflow: overflow, onHotEvent })
         .then((event) => {
           pipeline.notify();
           const derived = parseDerivedEvent(event, matchId);
@@ -647,7 +697,6 @@ export async function runObserve({
   clearTimeout(observerTimeout);
   clearInterval(pollTimer);
   clearInterval(pingTimer);
-  if (settleTimer) clearTimeout(settleTimer);
   probeControl.stopped = true;
   for (const socket of probeSockets) {
     if (socket.readyState === WebSocket.OPEN) {
@@ -669,8 +718,8 @@ export async function runObserve({
   state.overflowCount = queue.overflowCount;
   state.droppedCount = queue.droppedCount;
   if (queue.incomplete || state.completeness === 'incomplete') state.completeness = 'incomplete';
-  else if (state.result?.winner && state.terminalSeen) state.completeness = state.warmStartGap.present ? 'warm-start-partial' : 'complete';
-  else if (state.result?.winner) {
+  else if (state.result?.type === 'MATCH_FINAL' && state.terminalSeen) state.completeness = state.warmStartGap.present ? 'warm-start-partial' : 'complete';
+  else if (state.result?.type === 'MATCH_FINAL') {
     state.completeness = 'incomplete';
     state.errors.push({ type: 'terminal_not_observed' });
   }
@@ -709,10 +758,25 @@ export async function runObserve({
 
 export async function main(argv = process.argv.slice(2)) {
   const { command, matchId, options } = parseArgs(argv);
-  if (command !== 'observe' || !matchId) {
-    throw new Error('Usage: usopen-watch observe <matchId> [--output-dir DIR] [--http-url URL] [--reconnect-probe]');
+  if (command !== 'observe') {
+    throw new Error('Usage: usopen-watch observe [matchId] [--output-dir DIR] [--http-url URL] [--reconnect-probe]');
   }
-  const result = await runObserve({ matchId, ...options });
+  if (matchId && !/^[A-Za-z0-9_-]+$/.test(String(matchId))) throw new Error('matchId contains unsafe characters');
+  const finalists = await waitForMensSinglesFinalists({
+    url: options.httpUrls[0],
+    matchId: matchId ?? null,
+    intervalMs: options.startupPollMs,
+  });
+  const proposer = await prepareProposer({
+    finalists: finalists.players.map(({ id, name }) => ({ id, name })),
+    matchId: finalists.matchId,
+    rpcUrls: [process.env.POLYGON_RPC_1, process.env.POLYGON_RPC_2, process.env.POLYGON_RPC_3],
+    privateKey: process.env.TEST_PRIVATE_KEY || null,
+    autoTest: process.env.AUTO_TEST_PROPOSAL || false,
+    gasLimit: process.env.UMA_GAS_LIMIT || undefined,
+  });
+  process.stdout.write(`${formatReadiness(proposer)}\n`);
+  const result = await runObserve({ matchId: finalists.matchId, proposer, ...options });
   process.stdout.write(`${JSON.stringify(toJsonSafe(result), null, 2)}\n`);
   return result;
 }

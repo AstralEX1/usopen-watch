@@ -285,6 +285,8 @@ export function buildReport({ rawEvents, connections = [], manifest = {}, analys
     connections,
     signalRace: race,
     winnerAnalyses: analyses,
+    final: manifest.collection?.final ?? null,
+    proposerTelemetry: manifest.collection?.proposerTelemetry ?? null,
     recommendation,
   };
 }

@@ -118,6 +118,7 @@ function isValidWinner(value) {
 }
 
 export function parseDerivedEvent(rawEvent, targetMatchId = null) {
+  if (rawEvent._hotDerived) return rawEvent._hotDerived;
   const bytes = rawEvent.payloadBytes instanceof Uint8Array
     ? rawEvent.payloadBytes
     : rawEvent._payloadBytes instanceof Uint8Array
@@ -128,11 +129,11 @@ export function parseDerivedEvent(rawEvent, targetMatchId = null) {
     payloadBytesBase64: rawEvent.payloadBytesBase64 ?? null,
     encoding: rawEvent.payloadBytesBase64 ? 'base64' : 'utf8',
   };
-  let payload = null;
+  let payload = rawEvent.payload && typeof rawEvent.payload === 'object' ? rawEvent.payload : null;
   let parseError = null;
   let payloadDerivedRaw = null;
   let payloadDerivedEncoding = null;
-  if (encoded.payloadRaw !== null) {
+  if (payload === null && encoded.payloadRaw !== null) {
     try {
       payload = JSON.parse(encoded.payloadRaw);
     } catch (error) {
@@ -216,6 +217,7 @@ export function createReceiver({
   onControlPacket = () => {},
   onOverflow = () => {},
   onEnqueue = () => {},
+  onHotEvent = null,
 }) {
   const decoder = new MqttDecoder();
   const qos2Pending = new Set();
@@ -276,8 +278,20 @@ export function createReceiver({
           latency: { W0: callbackMonoNs, W1: null },
         };
         if (state.firstPublishRecvMonoNs === null) state.firstPublishRecvMonoNs = callbackMonoNs;
-        const queued = queue.push(event);
         event.latency.W1 = process.hrtime.bigint();
+        if (onHotEvent) {
+          try {
+            const derived = onHotEvent(event);
+            if (derived && typeof derived === 'object') event._hotDerived = derived;
+          } catch (error) {
+            state.malformedCount += 1;
+            onControlPacket({
+              type: 'hot-event',
+              error: error instanceof Error ? error.message : String(error),
+            });
+          }
+        }
+        const queued = queue.push(event);
         if (queued) onEnqueue(event);
         if (!queued) {
           state.incomplete = true;
@@ -341,6 +355,7 @@ export function serialiseRawEvent(event) {
   const derived = event.payloadRaw !== undefined ? event : parseDerivedEvent(event);
   const output = { ...derived };
   delete output._payloadBytes;
+  delete output._hotDerived;
   delete output.latency;
   if (event.mqttPacketBytes instanceof Uint8Array) {
     output.mqttPacketBytesBase64 = bytesToBase64(event.mqttPacketBytes);

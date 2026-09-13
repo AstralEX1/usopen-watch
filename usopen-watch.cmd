@@ -1,2 +1,2 @@
 @echo off
-node "%~dp0usopen-watch.mjs" %*
+node --env-file-if-exists="%~dp0.env" "%~dp0usopen-watch.mjs" %*
